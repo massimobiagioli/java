@@ -1,0 +1,4 @@
+=== Configurazione RaspberryPi ===
+sudo apt-get install arduino
+(sudo apt-get install librxtx-java)
+ln -s /dev/ttyACM0 /dev/ttyS80
