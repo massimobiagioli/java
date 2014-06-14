@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Client</title>
+		<script src="js/socket.io.min.js"></script>
+	</head>
+	<script>
+		function connect() {
+			var socket = io.connect('http://localhost:4000', {
+	        	'reconnection delay' : 2000,
+	            'force new connection' : true
+	        });			
+			
+			socket.on('message', function(data) {
+                console.log("Message from server: " + data);
+           	});
+		}		
+		</script>
+	<body>					
+		<button onclick="connect()">CONNECT</button>		
+	</body>
+</html>
